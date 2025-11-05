@@ -1,1 +1,40 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TodoList Interattiva</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="title">
+    <h1>TodoList con JS</h1>
+  </div>
 
+  <div class="input-row" aria-label="Aggiungi attività">
+    <input id="new" type="text" placeholder="Aggiungi un'attività e premi Invio">
+    <button class="primary" id="add" aria-label="Aggiungi">Aggiungi</button>
+  </div>
+
+  <div class="toolbar">
+    <div class="filters" role="tablist" aria-label="Filtri">
+      <button class="filter" data-filter="tutte" aria-pressed="true" role="tab">Tutte</button>
+      <button class="filter" data-filter="attive" aria-pressed="false" role="tab">Attive</button>
+      <button class="filter" data-filter="completate" aria-pressed="false" role="tab">Completate</button>
+    </div>
+    <div class="muted" id="counter" aria-live="polite">0 rimanenti</div>
+  </div>
+
+  <ul id="list" aria-live="polite"></ul>
+
+  <div id="empty" class="empty" hidden>
+    Nessuna attività qui. Aggiungine una sopra!
+  </div>
+
+  <button id="cleanEmpty" class="btn-icon danger" title="Rimuovi tutte le completate">
+    Svuota completate
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

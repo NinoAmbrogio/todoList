@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+html {
+  background-color: #2e3b44;
+  color: #ecf0f1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input + bottone aggiunta */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#new {
+  flex: 1;
+  padding: 10px;
+  background: #ffffff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+#add {
+  padding: 10px 14px;
+  background: #3498db;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#add:hover {
+  background: #2980b9;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filter {
+  background: #3d4c57;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.filter[aria-pressed="true"] {
+  background: #1abc9c;
+}
+
+.filter:hover {
+  background: #5a6b77;
+}
+
+/* Lista */
+ul {
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  background: #44535d;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.item.done {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.item input.chk {
+  margin-right: 14px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.txt {
+  flex: 1;
+  cursor: pointer;
+  word-break: break-word;
+}
+
+.txt[contenteditable="true"] {
+  background: rgba(255,255,255,0.1);
+  outline: 2px dashed #1abc9c;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+/* Pulsante elimina */
+.actions {
+  margin-left: 10px;
+}
+
+.btn-icon {
+  border: none;
+  background: #e74c3c;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.btn-icon:hover {
+  background: #c0392b;
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  color: #b0bec5;
+  margin: 20px 0;
+}
+
+/* Contatore */
+#counter {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Pulsante svuota */
+#cleanEmpty {
+  width: 100%;
+  margin-top: 12px;
+  background: #c0392b;
+}
+
+#cleanEmpty:hover {
+  background: #922b21;
+}
